@@ -1,0 +1,125 @@
+Client:
+  tableName: clients
+  columns:
+    idclients:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    name: string(150)
+    lastName: string(150)
+    tel: string(50)
+    email: string(50)
+    www: string(50)
+    note: string(255)
+    target: tinyint(1)
+Address:
+  tableName: addresses
+  columns:
+    idaddress:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    city: string(100)
+    zipCode: string(6)
+    street: string(150)
+    billing: tinyint(1)
+    shipping: tinyint(1)
+    client_id:
+      unsigned: true
+      type: integer
+  relations:
+    Client:
+      local: client_id
+      foreign: idclients
+      foreignType: many
+Order:
+  tableName: orders
+  columns:
+    idorders:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    number: string(15)
+    payment: integer
+    orderStatus: integer
+    addDate: timestamp
+    sendDate: timestamp
+    packingCost: decimal
+    shippingCost: decimal
+    sendReceipt: tinyint(1)
+    sendInfo: tinyint(1)
+    note: string(255)
+    client_id:
+      unsigned: true
+      type: integer
+  relations:
+    Client:
+      local: client_id
+      foreign: idclients
+      foreignType: many
+Email:
+  tableName: emails
+  columns:
+    idemails:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    subject: string(200)
+    body: text
+    addDate: timestamp
+
+EmailPackage:
+  columns:
+    idemailpackage:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    recipient:
+      notnull: false
+      type: string
+    address:
+      notnull: false
+      type: string
+    email_id:
+      unsigned: true
+      type: integer
+      primary: true
+  relations:
+    Email:
+      local: email_id
+      foreign: idemails
+      foreignType: one
+
+ExpCategory:
+  tableName: expcategories
+  columns:
+    idexpcategories:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    name: string(150)
+
+Expense:
+  tableName: expenses
+  columns:
+    idexpenses:
+      primary: true
+      unsigned: true
+      autoincrement: true
+      type: integer
+    amount: decimal
+    expcategory_id:
+      unsigned: true
+      type: integer
+    addDate: timestamp
+  relations:
+    ExpCategory:
+      local: expcategory_id
+      foreign: idexpcategories
+      foreignType: many

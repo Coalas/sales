@@ -1,0 +1,5 @@
+Developer: gabi solomon <solomongaby@yahoo.com>
+
+This class saves you're e-mails in a mysql table.
+In order for them to be sent you must acces the file queue.php by a cron job.
+I recomend setting it at 5 min. 

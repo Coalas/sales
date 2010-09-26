@@ -1,0 +1,17 @@
+{
+	"sProcessing": "Ładowanie...",
+	"sLengthMenu": "_MENU_ Rekordów na stronie",
+	"sZeroRecords": "Brak wyników wyszukiwania.",
+	"sInfo": "_START_ do _END_ z _TOTAL_ ",
+	"sInfoEmpty": "0 do 0 z 0 wszystkich",
+	"sInfoFiltered": "(z _MAX_ Ogółem )",
+	"sInfoPostFix": "",
+	"sSearch": "Wyszukaj",
+	"sUrl": "",
+	"oPaginate": {
+		"sFirst":    "Pierwszy",
+		"sPrevious": "Poprzedni",
+		"sNext":     "Następny",
+		"sLast":     "Ostatni"
+	}
+}

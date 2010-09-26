@@ -1,0 +1,121 @@
+ExpCategory:
+  ExpCategory_1:
+    name: 'zakup roślin'
+  ExpCategory_2:
+    name: paliwo
+  ExpCategory_3:
+    name: 'wydatki własne'
+  ExpCategory_4:
+    name: reklama
+  ExpCategory_5:
+    name: allegro
+  ExpCategory_6:
+    name: kredyty
+  ExpCategory_7:
+    name: 'wynagrodzenia pracowników'
+Email:
+  Email_1:
+    subject: 'email testowy'
+    body: '<p>&nbsp;<img title=\\'
+    addDate: '2010-09-23 09:12:36'
+  Email_2:
+    subject: test
+    body: '<p>test</p>'
+    addDate: '2010-09-23 09:13:09'
+  Email_3:
+    subject: 'Re: zlecenie'
+    body: "<p>&nbsp;</p>\r\n<p>Wiadomosc</p>\r\n<p>&nbsp;</p>"
+    addDate: '2010-09-23 09:13:29'
+Address:
+  Address_1:
+    city: Ciechanów
+    zipCode: 06-400
+    street: 'Płocka 1A'
+    billing: '1'
+    shipping: null
+    Client: Client_1
+  Address_2:
+    city: Warszawa
+    zipCode: 06-300
+    street: 'Warszawska 4'
+    billing: '0'
+    shipping: null
+    Client: Client_1
+  Address_3:
+    city: Barlinek
+    zipCode: 72-010
+    street: baranowska
+    billing: '1'
+    shipping: null
+    Client: Client_2
+  Address_4:
+    city: barlinek
+    zipCode: 05-555
+    street: barlinkowa
+    billing: '0'
+    shipping: null
+    Client: Client_2
+  Address_5:
+    city: Police
+    zipCode: 05-478
+    street: Brązowa
+    billing: '1'
+    shipping: null
+    Client: Client_3
+Client:
+  Client_1:
+    name: Jan
+    lastName: Kowalski
+    tel: '515000555'
+    email: jan@kowalski.pl
+    www: ''
+    note: null
+    target: '0'
+  Client_2:
+    name: 'Barlinecki Ośrodek Kultury'
+    lastName: ''
+    tel: '943632230'
+    email: coalas@o2.pl
+    www: www.dokdarlowo.pl
+    note: null
+    target: '0'
+  Client_3:
+    name: Karol
+    lastName: Nowak
+    tel: '333258741'
+    email: qqqq@r.pl
+    www: ''
+    note: null
+    target: '0'
+Expense:
+  Expense_1:
+    amount: '2000.00'
+    ExpCategory: ExpCategory_4
+    addDate: '2010-09-21 12:00:00'
+  Expense_2:
+    amount: '45.00'
+    ExpCategory: ExpCategory_5
+    addDate: '2010-09-23 13:12:07'
+  Expense_4:
+    amount: '100.00'
+    ExpCategory: ExpCategory_5
+    addDate: '2010-09-23 13:31:49'
+  Expense_5:
+    amount: '9.90'
+    ExpCategory: ExpCategory_5
+    addDate: '2010-09-23 13:33:55'
+  Expense_6:
+    amount: '3333.00'
+    ExpCategory: ExpCategory_1
+    addDate: '2010-09-23 14:01:41'
+EmailPackage:
+  EmailPackage_1_3:
+    idemailpackage: '1'
+    recipient: 'Karol Nowak'
+    address: qqqq@r.pl
+    Email: Email_3
+  EmailPackage_2_3:
+    idemailpackage: '2'
+    recipient: 'Karol Nowak'
+    address: qqqq@r.pl
+    Email: Email_3

@@ -1,0 +1,9 @@
+The class is setup for php5, if you want to make it compatible to php4 all you have to do is replace the instanceof operator with the php4 corespondent function is_a
+
+so you need to replace this line :
+if ( ($this->mysqlObj instanceof mysql) === false ) {                 
+with :
+ if ( is_a($this->mysqlObj,'mysql') === false ) { 
+
+
+thank you guto.onidesk@gmail.com
